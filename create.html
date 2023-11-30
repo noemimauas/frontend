@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TP Fullstack</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+
+    <div id="container">
+      <img src="images/blank.png" id="avatar">
+      <img src="images/blank.png" id="blusa">
+      <img src="images/blank.png" id="pants">
+      <img src="images/blank.png" id="shoes">
+    </div>
+
+    <table>
+      <tr>
+        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_1.png"><img
+              src="images/avatars/Avatar_1.png"></button></th>
+        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_2.png"><img
+              src="images/avatars/Avatar_2.png"></button></th>
+        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_3.png"><img
+              src="images/avatars/Avatar_3.png"></button></th>
+        <th><button type="button" onclick="show_avatar(this)" data-src="images/avatars/Avatar_4.png"><img
+              src="images/avatars/Avatar_4.png"></button></th>
+      </tr>
+      <tr>
+        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_1.png"><img
+              src="images/icons/blusa_icon_1.png"></button></th>
+        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_2.png"><img
+              src="images/icons/blusa_icon_2.png"></button></th>
+        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_3.png"><img
+              src="images/icons/blusa_icon_3.png"></button></th>
+        <th><button type="button" onclick="show_blusa(this)" data-src="images/clothes/Blusa_4.png"><img
+              src="images/icons/blusa_icon_4.png"></button></th>
+      </tr>
+      <tr>
+        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_1.png"><img
+              src="images/icons/pants_icon_1.png"></button></th>
+        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_2.png"><img
+              src="images/icons/pants_icon_2.png"></button></th>
+        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_3.png"><img
+              src="images/icons/pants_icon_3.png"></button></th>
+        <th><button type="button" onclick="show_pants(this)" data-src="images/clothes/Pants_4.png"><img
+              src="images/icons/pants_icon_4.png"></button></th>
+      </tr>
+      <tr>
+        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_1.png"><img
+              src="images/icons/shoes_icon_1.png"></button></th>
+        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_2.png"><img
+              src="images/icons/shoes_icon_2.png"></button></th>
+        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_3.png"><img
+              src="images/icons/shoes_icon_3.png"></button></th>
+        <th><button type="button" onclick="show_shoes(this)" data-src="images/clothes/Shoes_4.png"><img
+              src="images/icons/shoes_icon_4.png"></button></th>
+      </tr>
+    </table>
+    <button type="submit" id="saveButton">Guardar</button>
+    <script>
+      function show_avatar(button) {
+        var avatar = document.getElementById("avatar");
+        var item = button.getAttribute("data-src");
+        avatar.src = item;
+      }
+
+      function show_blusa(button) {
+        var blusa = document.getElementById("blusa");
+        var item = button.getAttribute("data-src");
+        blusa.src = item;
+      }
+
+      function show_pants(button) {
+        var pants = document.getElementById("pants");
+        var item = button.getAttribute("data-src");
+        pants.src = item;
+      }
+
+      function show_shoes(button) {
+        var shoes = document.getElementById("shoes");
+        var item = button.getAttribute("data-src");
+        shoes.src = item;
+      }
+    </script>
+    <script src="js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/create.js"></script>
+  </body>
+</html>
